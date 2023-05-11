@@ -32,7 +32,7 @@ const Journals = () => {
       <TouchableOpacity
         key={index}
         style={[
-          tw("p-3 m-2 bg-white rounded-md"),
+          tw("px-3 py-4 my-2 bg-white rounded-md"),
           {
             shadowColor: "black",
             shadowRadius: 2,
@@ -55,9 +55,13 @@ const Journals = () => {
 
   // component UI
   return (
-    <View style={tw("flex p-4 ")}>
+    <View style={tw("flex p-4 h-full bg-white")}>
       <Text style={tw("text-lg font-bold")}>Journals</Text>
-      <FlatList data={journaldata} renderItem={renderProjects} />
+      <FlatList
+        style={tw("overflow-visible")}
+        data={journaldata}
+        renderItem={renderProjects}
+      />
     </View>
   );
 };
